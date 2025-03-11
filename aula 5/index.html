@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de uso de semantica</title>
+</head>
+<body>
+    <h1>exemplos de uso de semântica no HTML</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Na frase temos uma <b>parte de texto em negrito</b> usando a tag B (não semântica)</p>
+    <p>Na frase temos uma parte <strong>parte do texto em negrito</strong> usando a tag strong (com semântica)</p>
+
+    <h2> Itálico / Ênfase</h2>
+    <p> Nesta frase vamos entrar com uma palavra em <i>itálico</i> usando a tag i (não semântica)</p>
+    <p> Nesta frase vamos entrar com uma palavra em <EM> itálico</EM> usando a tag EM (com semântica)</p>
+
+    <h2> Texto Marcador</h2>
+    <p>Aqui vamos usar um texto com destaque <mark style="background: red"> de marcador de texto</mark> usando mark</p> 
+    <p>Aqui vamos usar um texto com destaque <mark> de marcador de texto</mark> usando mark
+    
+    <h2>Texto grande / Texto pequeno </h2>
+    <p> Estamos trabalhndo com <big>texto grande</big> e uma <small>texto pequeno</small> nesta frase</p>
+
+    <h2>Texto Deletado</h2>
+    <p>Neste paragrafo vamos trabalhar com um texto <strike>que foi excluído</strike> da frase (forma semântica)</p>
+
+    <h2>Texto Inserido</h2>
+    <p>Nesta frase vamos desmonstrar como <ins>destacar um texto inserido</ins> na frase de forma semântica</p>
+    <p>Nesta frase vamos demonstrar como <u>destacar um texto inserido</u> na frase de forma não semântica</p>
+
+    <h2>Texto sobrescrito</h2>
+    <p>Vamos demonstrar uma formula da equação do segundo grau ax <sup>2</sup>+ bx + c = 0</p>
+    
+    <h2>Citações (quntation) simples</h2>
+    <p>segundo Steve Jobs, <quote>"A tecnologia move o mundo"</quote></p>
+
+    <h2>Citações completas (livros)</h2>
+    <p>segundo Ludgero Luiz Mendes:
+        <blockquote>A meu ver, não existem livros maus. Basta que , em milhões de palavras, centenas de pagina que abriguem...</blockquote> </p>
+
+        <h2>trecho de codigo de fontes </h2>
+        <p>neste exemplo vou inserir o comando <code>'valores': [10, 12, 15, 14, 100, 12, 14, 13, 12, 12]</code> que é um comando python</p>
+        <p>Inserindo um longo comando em python: <pre><code>
+            import numpy as np
+import pandas as pd
+from scipy import stats
+
+# Exemplo de dados
+data = {
+    'valores': [10, 12, 15, 14, 100, 12, 14, 13, 12, 12]
+}
+
+# Criando um DataFrame
+df = pd.DataFrame(data)
+
+# Calculando o Z-Score
+z_scores = np.abs(stats.zscore(df['valores']))
+
+# Definindo um limite para o Z-Score
+limite = 3
+
+# Remover outliers (onde o Z-Score é maior que o limite)
+df_sem_outliers = df[z_scores < limite]
+
+print("Dados sem outliers:")
+print(df_sem_outliers)
+        </code></pre></p>
+
+</body>
+</html>
